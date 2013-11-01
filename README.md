@@ -15,8 +15,9 @@ RootViewController.h
 
 RootViewController.m
 
-#pragma mark - VKConnectorDelegate
 ``` objective-c
+#pragma mark - VKConnectorDelegate
+
 - (void)VKRequest:(VKRequest *)request captchaSid:(NSString *)captchaSid captchaImage:(NSString *)captchaImage {
 	
 	if ( captchaSessionId == nil ) {
