@@ -7,16 +7,16 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol vkCaptchaVCProtocol <NSObject>
+@protocol VKCaptchaVCDelegate <NSObject>
 - (void)captchaEnteredWithValue:(NSString *) captchaValue;
 @end
 
-@interface VKCaptchaViewController : UIViewController <vkCaptchaVCProtocol> {
+@interface VKCaptchaViewController : UIViewController <VKCaptchaVCDelegate> {
 	IBOutlet UIImageView *captchaImg;
 	IBOutlet UITextField *captchaTxt;
 }
 
-@property (nonatomic, weak) id <vkCaptchaVCProtocol> delegate;
+@property (nonatomic, weak) id <VKCaptchaVCDelegate> delegate;
 @property (nonatomic, strong) UIImageView *captchaImg;
 
 - (IBAction)close;
