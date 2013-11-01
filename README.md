@@ -6,17 +6,17 @@ Vkontakte iOS SDK [repo](https://github.com/AndrewShmig/Vkontakte-iOS-SDK-LV).
 
 #Code Example
 RootViewController.h
-<pre><code>
+``` objective-c
 #import "VKCaptchaViewController.h"
-@interface RootViewController : UIViewController &lt;VKConnectorDelegate, VKRequestDelegate, VKCaptchaVCProtocol&gt; {
+@interface RootViewController : UIViewController <VKConnectorDelegate, VKRequestDelegate, VKCaptchaVCProtocol> {
 	NSString *captchaSessionId;
 }
-</code></pre>
+```
 
 RootViewController.m
 
 #pragma mark - VKConnectorDelegate
-<pre><code>
+``` objective-c
 - (void)VKRequest:(VKRequest *)request captchaSid:(NSString *)captchaSid captchaImage:(NSString *)captchaImage {
 	
 	if ( captchaSessionId == nil ) {
@@ -45,7 +45,7 @@ RootViewController.m
 	   @"captcha_key" : captchaText
 	}];
 }
-</code></pre>
+```
 
 #Screenshot
 ![UIViewController for captcha example](http://arm1.ru/img/uploaded/vk-sdk-captcha-uiviewcontroller.png "Screenshot")
